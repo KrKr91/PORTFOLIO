@@ -1,0 +1,52 @@
+.header {
+  // Flexbox pour aligner le logo à gauche et la nav à droite
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); // Petite ligne subtile en dessous
+  margin-bottom: 30px;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+
+    .logo-img {
+      width: 50px; // Taille de ton logo, à ajuster si besoin
+      height: 50px;
+      border-radius: 8px; // Rend les bords du logo un peu arrondis
+      object-fit: cover;
+    }
+  }
+
+  .nav-row {
+    display: flex;
+    gap: 20px; // Espace entre chaque lien
+    align-items: center;
+
+    .nav-item {
+      text-decoration: none;
+      color: #F8F9FA; // Blanc cassé par défaut
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s ease; // Animation douce au survol
+
+      &:hover {
+        color: #4CAF50; // Le vert au survol (on ajustera la variable plus tard !)
+      }
+    }
+  }
+}
+
+// Petit bonus responsive pour les téléphones
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+
+    .nav-row {
+      gap: 15px;
+      font-size: 14px;
+    }
+  }
+}

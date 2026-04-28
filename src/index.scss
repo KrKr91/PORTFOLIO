@@ -1,0 +1,33 @@
+/* Importation de tes polices depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap');
+
+:root {
+  /* Ton Design System (Règle des 60-30-10) */
+  --color-bg-primary: #0B132B; /* 60% : Bleu nuit très profond pour le fond */
+  --color-bg-secondary: #1C2541; /* 30% : Bleu moyen pour tes cartes/collapses */
+  --color-accent: #FF9F1C; /* 10% : Orange Twitch pour tes boutons et badges */
+  
+  --color-text-primary: #F8F9FA; /* Blanc cassé pour le texte principal */
+  --color-text-secondary: #9BA4B5; /* Gris/bleuté pour le texte secondaire */
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  color: var(--color-text-primary);
+}
