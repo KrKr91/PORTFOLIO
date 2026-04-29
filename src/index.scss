@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap');
 
 :root {
-  /* Ton Design System (Règle des 60-30-10) */
-  --color-bg-primary: #0B132B; /* 60% : Bleu nuit très profond pour le fond */
-  --color-bg-secondary: #1C2541; /* 30% : Bleu moyen pour tes cartes/collapses */
-  --color-accent: #FF9F1C; /* 10% : Orange Twitch pour tes boutons et badges */
+  /* Ton nouveau Design System Clair (Règle 60-30-10) */
+  --color-bg-primary: #dbe9ee; /* 60% : Un bleu très clair, très proche du blanc */
+  --color-bg-secondary: #FFFFFF; /* 30% : Blanc pur (parfait pour tes cartes ou collapses) */
+  --color-accent: #4CAF50; /* 10% : Le vert vif de ton logo pour tes boutons ! */
   
-  --color-text-primary: #F8F9FA; /* Blanc cassé pour le texte principal */
-  --color-text-secondary: #9BA4B5; /* Gris/bleuté pour le texte secondaire */
+  /* Les textes s'inversent pour l'accessibilité */
+  --color-text-primary: #1D2A4D; /* Le bleu marine de ton logo pour les gros textes/titres */
+  --color-text-secondary: #4A5568; /* Un gris-bleu pour le texte classique */
   
   --font-sans: 'Inter', sans-serif;
   --font-title: 'Montserrat', sans-serif;
