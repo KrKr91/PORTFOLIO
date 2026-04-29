@@ -1,0 +1,120 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+
+  &__tag {
+    font-size: 13px;
+    color: var(--color-accent);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+
+    &--accent {
+      color: var(--color-accent);
+    }
+  }
+
+  &__subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  &__pitch {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  &__cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+  }
+
+  &__avatar-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: var(--color-bg-secondary);
+    border: 3px solid var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2rem 0;
+
+    &__pitch {
+      margin: 0 auto 2rem;
+    }
+
+    &__cta {
+      justify-content: center;
+    }
+
+    &__avatar-circle {
+      width: 120px;
+      height: 120px;
+      font-size: 2rem;
+    }
+  }
+}
+
+// Boutons réutilisables
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &--primary {
+    background-color: var(--color-accent);
+    color: #fff;
+
+    &:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--secondary {
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    background: transparent;
+
+    &:hover {
+      background-color: var(--color-accent);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+}
