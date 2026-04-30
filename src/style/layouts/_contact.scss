@@ -1,0 +1,126 @@
+.contact {
+  padding: 4rem 0;
+
+  &__title {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background-color: var(--color-accent);
+      margin-top: 0.5rem;
+      border-radius: 2px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  &__intro {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+
+      a {
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__form {
+    background-color: var(--color-bg-secondary);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+
+    input,
+    textarea {
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background-color: var(--color-bg-primary);
+      color: var(--color-text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+      resize: vertical;
+
+      &:focus {
+        outline: none;
+        border-color: var(--color-accent);
+      }
+
+      &::placeholder {
+        color: var(--color-text-secondary);
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__success {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    &__content {
+      grid-template-columns: 1fr;
+    }
+  }
+}

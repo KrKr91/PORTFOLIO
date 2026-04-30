@@ -2,14 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap');
 
 :root {
-  /* Ton nouveau Design System Clair (Règle 60-30-10) */
-  --color-bg-primary: #dbe9ee; /* 60% : Un bleu très clair, très proche du blanc */
-  --color-bg-secondary: #FFFFFF; /* 30% : Blanc pur (parfait pour tes cartes ou collapses) */
-  --color-accent: #4CAF50; /* 10% : Le vert vif de ton logo pour tes boutons ! */
+  --color-bg-primary: #dbe9ee; 
+  --color-bg-secondary: #FFFFFF; 
+  --color-accent: #4CAF50; 
   
-  /* Les textes s'inversent pour l'accessibilité */
-  --color-text-primary: #1D2A4D; /* Le bleu marine de ton logo pour les gros textes/titres */
-  --color-text-secondary: #4A5568; /* Un gris-bleu pour le texte classique */
+  /* les textes se changent pour l'accessibilité */
+  --color-text-primary: #1D2A4D; 
+  --color-text-secondary: #4A5568; 
   
   --font-sans: 'Inter', sans-serif;
   --font-title: 'Montserrat', sans-serif;
