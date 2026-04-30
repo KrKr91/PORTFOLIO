@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import projectsData from '../data/projects';
+import Banner from './Banner';
 import '../style/layouts/_project-detail.scss';
 
 function ProjectDetail() {
@@ -17,19 +18,18 @@ function ProjectDetail() {
 
   return (
     <div className="project-detail page">
-      <Link to="/#projects" className="project-detail__back">
-        ← Retour aux projets
-      </Link>
 
-      <header className="project-detail__header">
-        <span className="project-detail__tag">{project.tag}</span>
-        <h1 className="project-detail__title">{project.title}</h1>
-        <ul className="project-detail__stack">
-          {project.stack.map((tech) => (
-            <li key={tech} className="project-detail__tech">{tech}</li>
-          ))}
-        </ul>
-      </header>
+      <div className="project-detail__nav">
+        <Link to="/" className="project-detail__back">← Accueil</Link>
+        <Link to="/#projects" className="project-detail__back">← Retour aux projets</Link>
+      </div>
+
+      {/* la bannière */}
+      <Banner
+        image={project.banner}
+        title={project.title}
+        subtitle={project.tag}
+      />
 
       <div className="project-detail__links">
         {project.github && (

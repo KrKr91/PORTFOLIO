@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import clipsData from '../data/clips';
 import '../style/layouts/_twitch.scss';
+import Banner from './Banner';
 
 function Twitch() {
   const [selectedClip, setSelectedClip] = useState(null);
@@ -11,18 +13,20 @@ function Twitch() {
   return (
     <div className="twitch page">
 
-      <header className="twitch__header">
-        <span className="twitch__icon">🎮</span>
-        <div>
-          <h1 className="twitch__title">Gaming & Twitch</h1>
-          <p className="twitch__sub">
-            En dehors du code, je streame et joue aux jeux vidéo. 
-            Voici quelques-uns de mes meilleurs moments !
-          </p>
-        </div>
-      </header>
+      {}
+      <Banner
+        image="/banners/gaming.webp"
+        title="Gaming & Twitch"
+        subtitle="🎮 Mes meilleurs moments"
+      />
 
       <section className="twitch__section">
+        {}
+        <p className="twitch__intro" style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          En dehors du code, je streame et joue aux jeux vidéo. 
+          Voici quelques-uns de mes meilleurs moments !
+        </p>
+
         <h2 className="twitch__section-title">Mes clips</h2>
         <div className="twitch__grid">
           {clipsData.map((clip) => (
@@ -52,7 +56,7 @@ function Twitch() {
         </div>
       </section>
 
-      {/* modale vidéo */}
+      {/* la modale */}
       {selectedClip && (
         <div
           className="twitch__modal"

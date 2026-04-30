@@ -1,3 +1,4 @@
+import Collapse from './Collapse';
 import '../style/layouts/_skills.scss';
 
 const skillsData = [
@@ -28,19 +29,17 @@ function Skills() {
     <section className="skills" id="skills">
       <h2 className="skills__title">Compétences</h2>
 
-      <div className="skills__grid">
+      <div className="skills__list">
         {skillsData.map((group) => (
-          <div className="skills__card" key={group.category}>
-            <div className="skills__card-header">
-              <span className="skills__card-icon">{group.icon}</span>
-              <h3 className="skills__card-title">{group.category}</h3>
-            </div>
-            <ul className="skills__list">
-              {group.skills.map((skill) => (
-                <li className="skills__badge" key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
+          <Collapse
+            key={group.category}
+            title={group.category}
+            icon={group.icon}
+          >
+            {group.skills.map((skill) => (
+              <span className="skills__badge" key={skill}>{skill}</span>
+            ))}
+          </Collapse>
         ))}
       </div>
     </section>

@@ -2,6 +2,7 @@ const projectsData = [
   {
     id: 'kasa',
     title: 'Kasa',
+    banner: '/banners/kasa.webp',
     tag: '⭐ Projet phare',
     description: 'Refonte complète du site de location immobilière Kasa. Développement d\'une SPA React avec routing, composants réutilisables et intégration de données JSON.',
     stack: ['React', 'React Router', 'Vite', 'Sass'],
@@ -27,6 +28,7 @@ const projectsData = [
   {
     id: 'sophie-bluel',
     title: 'Sophie Bluel',
+    banner: '/banners/sophie-bluel.webp',
     tag: 'JavaScript · API',
     description: 'Développement de la partie front-end du site d\'une architecte. Manipulation du DOM, appels API REST, gestion d\'une modale de connexion et d\'upload de médias.',
     stack: ['JavaScript', 'HTML', 'CSS', 'API REST'],
@@ -47,6 +49,7 @@ const projectsData = [
   {
     id: 'nina-carducci',
     title: 'Nina Carducci',
+    banner: '/banners/nina-carducci.webp',
     tag: 'SEO · Performance',
     description: 'Optimisation SEO et performance d\'un site de photographe. Audit Lighthouse, amélioration du score de performance, accessibilité et référencement naturel.',
     stack: ['SEO', 'Lighthouse', 'HTML', 'CSS'],
