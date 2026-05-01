@@ -6,15 +6,17 @@ function Header() {
   return (
     <header className="header">
       <div className="logo-container">
-        <img src={logo} alt="Logo Christophe" className="logo-img" />
+        <Link to="/">
+          <img src={logo} alt="Logo Christophe" className="logo-img" />
+        </Link>
       </div>
 
       <nav className="nav-row">
-        <a href="#about" className="nav-item">À propos</a>
-        <a href="#projects" className="nav-item">Projets</a>
-        <a href="#skills" className="nav-item">Compétences</a>
+        <Link to="/#about" className="nav-item">À propos</Link>
+        <Link to="/#projects" className="nav-item">Projets</Link>
+        <Link to="/#skills" className="nav-item">Compétences</Link>
         <Link to="/gaming" className="nav-item">🎮 Gaming</Link>
-        <a href="#contact" className="nav-item">Contact</a>
+        <Link to="/#contact" className="nav-item">Contact</Link>
       </nav>
     </header>
   );

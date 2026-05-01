@@ -1,9 +1,9 @@
-import '../style/layouts/_intro.scss'; 
+import '../style/layouts/_intro.scss';
+import chrisPhoto from '../assets/chris.jpg';
 
-function Intro() { 
+function Intro() {
   return (
-    
-    <section className="intro" id="home"> 
+    <section className="intro" id="home">
       <div className="intro__content">
         <p className="intro__tag">Disponible immédiatement à Toulouse</p>
         <h1 className="intro__title">
@@ -20,10 +20,14 @@ function Intro() {
         </div>
       </div>
       <div className="intro__avatar">
-        <div className="intro__avatar-circle">CA</div>
+        <img
+          src={chrisPhoto}
+          alt="Christophe Aireaudeau"
+          className="intro__avatar-img"
+        />
       </div>
     </section>
   );
 }
 
-export default Intro; 
+export default Intro;

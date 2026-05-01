@@ -31,7 +31,7 @@
       transition: color 0.3s ease; // animation au survol
 
       &:hover {
-        color: #4CAF50; // le vert au survol 
+        color: var(--color-accent); // le vert au survol 
       }
     }
   }

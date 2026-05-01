@@ -37,7 +37,6 @@ function About() {
             <li><span>🚗</span> Permis B, véhiculé</li>
           </ul>
           
-          {}
           <Link to="/cv" className="btn btn--primary">
             Afficher mon CV
           </Link>

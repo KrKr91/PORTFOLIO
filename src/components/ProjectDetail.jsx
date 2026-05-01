@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import projectsData from '../data/projects';
 import Banner from './Banner';
@@ -8,6 +8,14 @@ function ProjectDetail() {
   const { id } = useParams();
   const project = projectsData.find((p) => p.id === id);
   const [lightbox, setLightbox] = useState(null);
+
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Escape') setLightbox(null);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [lightbox]);
 
   if (!project) {
     return (
@@ -86,7 +94,6 @@ function ProjectDetail() {
         </section>
       )}
 
-      {/* la lightbox */}
       {lightbox && (
         <div
           className="lightbox"

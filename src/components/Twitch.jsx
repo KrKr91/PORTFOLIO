@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import clipsData from '../data/clips';
 import '../style/layouts/_twitch.scss';
 import Banner from './Banner';

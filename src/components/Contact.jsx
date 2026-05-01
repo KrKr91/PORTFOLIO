@@ -8,17 +8,36 @@ function Contact() {
     message: '',
   });
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // on simule l'envoi et on branchera Formspree après
-    console.log('Message envoyé :', formData);
-    setSent(true);
-    setFormData({ name: '', email: '', message: '' });
+    setLoading(true);
+    setError(false);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mvzlgqod', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -50,6 +69,7 @@ function Contact() {
           </ul>
 
           <div className="contact__socials">
+
             <a
               href="https://github.com/KrKr91"
               className="btn btn--secondary"
@@ -74,6 +94,12 @@ function Contact() {
           {sent && (
             <div className="contact__success">
               ✅ Message envoyé ! Je te réponds très vite.
+            </div>
+          )}
+
+          {error && (
+            <div className="contact__error">
+              ❌ Une erreur s'est produite. Réessaie ou contacte-moi directement par email.
             </div>
           )}
 
@@ -116,8 +142,12 @@ function Contact() {
             />
           </div>
 
-          <button type="submit" className="btn btn--primary">
-            Envoyer le message
+          <button
+            type="submit"
+            className="btn btn--primary"
+            disabled={loading}
+          >
+            {loading ? 'Envoi en cours...' : 'Envoyer le message'}
           </button>
         </form>
 
