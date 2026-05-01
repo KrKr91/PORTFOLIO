@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import projectsData from '../data/projects';
 import Banner from './Banner';
@@ -6,6 +7,7 @@ import '../style/layouts/_project-detail.scss';
 function ProjectDetail() {
   const { id } = useParams();
   const project = projectsData.find((p) => p.id === id);
+  const [lightbox, setLightbox] = useState(null);
 
   if (!project) {
     return (
@@ -24,7 +26,6 @@ function ProjectDetail() {
         <Link to="/#projects" className="project-detail__back">← Retour aux projets</Link>
       </div>
 
-      {/* la bannière */}
       <Banner
         image={project.banner}
         title={project.title}
@@ -78,10 +79,36 @@ function ProjectDetail() {
                 src={src}
                 alt={`Capture d'écran ${project.title} ${index + 1}`}
                 className="project-detail__screenshot"
+                onClick={() => setLightbox(src)}
               />
             ))}
           </div>
         </section>
+      )}
+
+      {/* la lightbox */}
+      {lightbox && (
+        <div
+          className="lightbox"
+          onClick={() => setLightbox(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Agrandissement de l'image"
+        >
+          <button
+            className="lightbox__close"
+            onClick={() => setLightbox(null)}
+            aria-label="Fermer"
+          >
+            ✕
+          </button>
+          <img
+            src={lightbox}
+            alt="Capture agrandie"
+            className="lightbox__img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
       )}
 
     </div>
