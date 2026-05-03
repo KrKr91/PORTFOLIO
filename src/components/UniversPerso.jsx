@@ -6,15 +6,14 @@ const designsData = [
     id: 1,
     title: 'Affiche Japon - Dream',
     src: '/designs/affiche-jap.webp',
-    description: 'Description',
+    description: 'Affiche personnelle concernant un rêve japonais',
   },
   {
     id: 2,
     title: 'Logo Betsu Studio',
     src: '/designs/betsu-logo.webp',
-    description: 'Description',
+    description: 'Logo pour le studio Betsu',
   },
-  // mes créa ici
 ];
 
 function UniversPerso() {

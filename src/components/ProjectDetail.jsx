@@ -9,6 +9,10 @@ function ProjectDetail() {
   const [lightbox, setLightbox] = useState(null);
 
   useEffect(() => {
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}, [id]);
+
+  useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'Escape') setLightbox(null);
     };
