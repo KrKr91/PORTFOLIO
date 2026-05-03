@@ -10,13 +10,13 @@ import ProjectDetail from './components/ProjectDetail';
 import UniversPerso from './components/UniversPerso';
 import CV from './components/CV';
 import NotFound from './components/NotFound';
-import ScrollToHash from './components/ScrollToHash'; 
-
+import useScrollToHash from './hooks/useScrollToHash';
 
 function App() {
+  useScrollToHash();
+
   return (
     <>
-      <ScrollToHash /> 
       <Header />
       <main>
         <Routes>

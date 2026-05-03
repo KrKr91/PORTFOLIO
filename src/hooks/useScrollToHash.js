@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-function ScrollToHash() {
-  // on récupère le hash ET le pathname (le nom de la page)
+function useScrollToHash() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
@@ -13,12 +12,9 @@ function ScrollToHash() {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // si y a pas de hash, on force le retour en haut (0, 0)
       window.scrollTo(0, 0);
     }
-  }, [pathname, hash]); // le useEffect se relance à chaque changement de page
-
-  return null;
+  }, [pathname, hash]);
 }
 
-export default ScrollToHash;
+export default useScrollToHash;

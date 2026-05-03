@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import chrisPhoto from '../assets/chris.webp';
 
 function Intro() {
@@ -14,8 +15,8 @@ function Intro() {
           Passionné par le web depuis le lycée, reconverti et déterminé à transformer ma passion en expertise !
         </p>
         <div className="intro__cta">
-          <a href="#projects" className="btn btn--primary">Voir mes projets</a>
-          <a href="#contact" className="btn btn--secondary">Me contacter</a>
+          <Link to="/#projects" className="btn btn--primary">Voir mes projets</Link>
+          <Link to="/#contact" className="btn btn--secondary">Me contacter</Link>
         </div>
       </div>
       <div className="intro__avatar">

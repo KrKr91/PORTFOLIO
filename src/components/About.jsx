@@ -14,7 +14,7 @@ function About() {
           <p>
             Après un parcours en gestion et communication, j'ai sauté le pas et me 
             suis pleinement reconverti dans le développement web. Résultat ? Une double 
-            casquette que peu de developpeurs ont. Je comprends autant les contraintes techniques 
+            casquette que peu de développeurs ont. Je comprends autant les contraintes techniques 
             que les besoins métier et les attentes utilisateurs.
           </p>
           <p>

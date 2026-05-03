@@ -35,7 +35,7 @@ function Header() {
         </Link>
       </div>
 
-      <nav className="nav-row" ref={navRef} onMouseLeave={handleMouseLeave}>
+      <nav className="nav-row" ref={navRef} onMouseLeave={handleMouseLeave} aria-label="Navigation principale">
         {navItems.map((item) => (
           <Link
             key={item.to}

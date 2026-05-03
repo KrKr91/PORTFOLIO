@@ -4,14 +4,14 @@ import Banner from './Banner';
 const designsData = [
   {
     id: 1,
-    title: 'Création 1',
-    src: '/designs/design-1.webp',
+    title: 'Affiche Japon - Dream',
+    src: '/designs/affiche-jap.webp',
     description: 'Description',
   },
   {
     id: 2,
-    title: 'Création 2',
-    src: '/designs/design-2.webp',
+    title: 'Logo Betsu Studio',
+    src: '/designs/betsu-logo.webp',
     description: 'Description',
   },
   // mes créa ici

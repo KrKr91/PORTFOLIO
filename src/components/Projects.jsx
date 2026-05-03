@@ -24,7 +24,6 @@ function Projects() {
             </ul>
 
             <div className="projects__links">
-              {}
               <Link to={`/projet/${project.id}`} className="btn btn--primary">
                 Voir le projet
               </Link>
