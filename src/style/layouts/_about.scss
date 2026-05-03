@@ -42,7 +42,8 @@
 
   &__fun {
     font-style: italic;
-    opacity: 0.85;
+    opacity: 1;
+    color: var(--color-text-secondary);
   }
 
   &__info {

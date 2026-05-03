@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer__content">
 
-        <p className="footer__name">Christophe Aireaudeau</p>
+        <h2 className="footer__name">Christophe Aireaudeau</h2>
         <p className="footer__sub">Développeur Web Junior · Toulouse</p>
 
         <div className="footer__links">

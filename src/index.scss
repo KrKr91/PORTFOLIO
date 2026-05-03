@@ -1,19 +1,17 @@
-/* Importation de tes polices depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap');
 
 :root {
-  --color-bg-primary: #dbe9ee; 
-  --color-bg-secondary: #FFFFFF; 
-  --color-accent: #4CAF50; 
-  
-  /* les textes se changent pour l'accessibilité */
-  --color-text-primary: #1D2A4D; 
-  --color-text-secondary: #4A5568; 
-  
+  --color-bg-primary: #dbe9ee;
+  --color-bg-secondary: #FFFFFF;
+  --color-accent: #2E7D32;
+  --color-accent-text: #1B5E20;
+  --color-text-primary: #1D2A4D;
+  --color-text-secondary: #4A5568;
+  --color-text-tertiary: #4A5568;
+
   --font-sans: 'Inter', sans-serif;
   --font-title: 'Montserrat', sans-serif;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;

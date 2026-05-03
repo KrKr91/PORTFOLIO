@@ -1,5 +1,5 @@
 import '../style/layouts/_intro.scss';
-import chrisPhoto from '../assets/chris.jpg';
+import chrisPhoto from '../assets/chris.webp';
 
 function Intro() {
   return (

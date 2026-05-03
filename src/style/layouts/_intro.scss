@@ -7,8 +7,8 @@
 
   &__tag {
     font-size: 13px;
-    color: var(--color-accent);
-    font-weight: 500;
+    color: #1B5E20;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 1rem;
@@ -21,7 +21,7 @@
     margin-bottom: 0.5rem;
 
     &--accent {
-      color: var(--color-accent);
+      color: var(--color-accent-text);
     }
   }
 
@@ -54,15 +54,14 @@
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background-color: var(--color-bg-secondary);
     border: 3px solid var(--color-accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-title);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-accent);
+    object-fit: cover;
+    object-position: center top;
+
+    @media (max-width: 768px) {
+      width: 120px;
+      height: 120px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -77,27 +76,20 @@
     &__cta {
       justify-content: center;
     }
-
-    &__avatar-circle {
-      width: 120px;
-      height: 120px;
-      font-size: 2rem;
-    }
   }
 }
 
-// Boutons réutilisables
 .btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
   border-radius: 8px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
 
   &--primary {
-    background-color: var(--color-accent);
+    background-color: #2E7D32;
     color: #fff;
 
     &:hover {
@@ -108,7 +100,7 @@
 
   &--secondary {
     border: 2px solid var(--color-accent);
-    color: var(--color-accent);
+    color: #1B5E20;
     background: transparent;
 
     &:hover {
