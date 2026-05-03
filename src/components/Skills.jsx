@@ -1,5 +1,4 @@
 import Collapse from './Collapse';
-import '../style/layouts/_skills.scss';
 
 const skillsData = [
   {

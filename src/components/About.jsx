@@ -1,4 +1,3 @@
-import '../style/layouts/_about.scss';
 import { Link } from 'react-router-dom';
 
 function About() {

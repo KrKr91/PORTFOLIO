@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
-import '../style/layouts/_cv.scss';
 
 function CV() {
   return (
     <div className="cv page">
 
       <div className="cv__nav">
-        <Link to="/" className="cv__back">← Accueil</Link>
+        <Link to="/" className="cv__back">Accueil</Link>
         
         <a 
           href="/CV_AIREAUDEAU_CHRISTOPHE_2026.pdf"

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import projectsData from '../data/projects';
 import Banner from './Banner';
-import '../style/layouts/_project-detail.scss';
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -30,8 +29,7 @@ function ProjectDetail() {
     <div className="project-detail page">
 
       <div className="project-detail__nav">
-        <Link to="/" className="project-detail__back">← Accueil</Link>
-        <Link to="/#projects" className="project-detail__back">← Retour aux projets</Link>
+        <Link to="/" className="project-detail__back">Accueil</Link>
       </div>
 
       <Banner

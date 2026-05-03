@@ -7,11 +7,11 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetail from './components/ProjectDetail';
-import Twitch from './components/Twitch';
+import UniversPerso from './components/UniversPerso';
 import CV from './components/CV';
 import NotFound from './components/NotFound';
 import ScrollToHash from './components/ScrollToHash'; 
-import './App.scss';
+
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
             </div>
           } />
           <Route path="/projet/:id" element={<ProjectDetail />} />
-          <Route path="/gaming" element={<Twitch />} />
+          <Route path="/univers-perso" element={<UniversPerso />} />
           <Route path="/cv" element={<CV />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

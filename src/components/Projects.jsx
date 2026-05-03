@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import projectsData from '../data/projects';
-import '../style/layouts/_projects.scss';
 
 function Projects() {
   return (

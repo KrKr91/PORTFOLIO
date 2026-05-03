@@ -2,23 +2,21 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function ScrollToHash() {
-  const { hash } = useLocation();
+  // on récupère le hash ET le pathname (le nom de la page)
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // si y a un # dans l'URL 
     if (hash) {
       const id = hash.replace('#', '');
       const element = document.getElementById(id);
-      
-      // on fait glisser la page jusqu'à la section
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // sinon on remonte tout en haut
+      // si y a pas de hash, on force le retour en haut (0, 0)
       window.scrollTo(0, 0);
     }
-  }, [hash]);
+  }, [pathname, hash]); // le useEffect se relance à chaque changement de page
 
   return null;
 }
