@@ -10,11 +10,13 @@ import ProjectDetail from './components/ProjectDetail';
 import Twitch from './components/Twitch';
 import CV from './components/CV';
 import NotFound from './components/NotFound';
+import ScrollToHash from './components/ScrollToHash'; 
 import './App.scss';
 
 function App() {
   return (
     <>
+      <ScrollToHash /> 
       <Header />
       <main>
         <Routes>
