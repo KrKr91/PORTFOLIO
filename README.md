@@ -1,16 +1,71 @@
-# React + Vite
+# Portfolio Professionnel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur le dépôt de mon portfolio de développeur web.
+Ce projet a été conçu pour présenter mon profil, mes compétences techniques, ainsi que les différents projets que j'ai réalisés.
 
-Currently, two official plugins are available:
+Il a été développé sous forme de **Single Page Application (SPA)** afin de garantir une navigation fluide et une expérience utilisateur optimale.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+ **Voir le projet en ligne :**
+ https://portfolio-git-main-krkr91s-projects.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Guide d'installation (lancer le projet en local)
 
-## Expanding the ESLint configuration
+Si vous souhaitez explorer le code et lancer l'application sur votre machine, suivez ces étapes :
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Prérequis
+
+Assurez-vous d'avoir installé **Node.js** sur votre ordinateur.
+Vérifiez avec la commande suivante dans votre terminal :
+
+```bash
+node -v
+```
+
+---
+
+### 2. Cloner le dépôt
+
+Clonez le projet sur votre machine locale :
+
+```bash
+git clone https://github.com/KrKr91/nom-de-ton-repo.git
+```
+
+---
+
+### 3. Accéder au dossier du projet
+
+```bash
+cd nom-de-ton-repo
+```
+
+---
+
+### 4. Installer les dépendances
+
+Installez tous les paquets nécessaires :
+
+```bash
+npm install
+```
+
+---
+
+### 5. Lancer le serveur de développement
+
+Démarrez l'application en local (avec Vite) :
+
+```bash
+npm run dev
+```
+
+---
+
+### 6. Visualiser le projet
+
+Ouvrez votre navigateur et rendez-vous à l'adresse indiquée dans le terminal (généralement) :
+
+ http://localhost:5173
+

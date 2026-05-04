@@ -43,7 +43,7 @@ function Footer() {
         </div>
 
         <p className="footer__copy">
-          © 2026 Christophe Aireaudeau — Fait avec React & ❤️
+          © 2026 Christophe Aireaudeau - Fait avec React & ❤️ ! 
         </p>
 
       </div>
