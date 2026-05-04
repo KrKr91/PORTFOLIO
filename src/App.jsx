@@ -11,6 +11,7 @@ import UniversPerso from './components/UniversPerso';
 import CV from './components/CV';
 import NotFound from './components/NotFound';
 import useScrollToHash from './hooks/useScrollToHash';
+import MentionsLegales from './components/MentionsLegales';
 
 function App() {
   useScrollToHash();
@@ -32,6 +33,7 @@ function App() {
           <Route path="/projet/:id" element={<ProjectDetail />} />
           <Route path="/univers-perso" element={<UniversPerso />} />
           <Route path="/cv" element={<CV />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

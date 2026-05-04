@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function Collapse({ title, icon, children }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className={`collapse ${isOpen ? 'collapse--open' : ''}`}>

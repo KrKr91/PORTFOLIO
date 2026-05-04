@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Footer() {
   return (
     <footer className="footer">
@@ -33,6 +35,11 @@ function Footer() {
           >
             Email
           </a>
+          
+          <span className="footer__sep">·</span>
+          <Link to="/mentions-legales" className="footer__link">
+            Mentions Légales
+          </Link>
         </div>
 
         <p className="footer__copy">
