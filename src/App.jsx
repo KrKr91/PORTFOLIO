@@ -13,6 +13,7 @@ import NotFound from './components/NotFound';
 import useScrollToHash from './hooks/useScrollToHash';
 import MentionsLegales from './components/MentionsLegales';
 
+// fonction pour le scroll auto
 function App() {
   useScrollToHash();
 

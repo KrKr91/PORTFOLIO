@@ -5,13 +5,19 @@ import Banner from './Banner';
 
 function ProjectDetail() {
   const { id } = useParams();
+  
+  // on cherche dans notre fichier de données le projet 
   const project = projectsData.find((p) => p.id === id);
+
+  // si null la lightbox est fermée
   const [lightbox, setLightbox] = useState(null);
 
+  // on remonte en haut de la page à chaque projet
   useEffect(() => {
-  window.scrollTo({ top: 0, behavior: 'instant' });
-}, [id]);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [id]);
 
+  // lightbox fermée avec echap du clavier
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'Escape') setLightbox(null);
@@ -20,6 +26,7 @@ function ProjectDetail() {
     return () => window.removeEventListener('keydown', handleKey);
   }, [lightbox]);
 
+  // si un user tape une mauvaise URL on affiche ce message
   if (!project) {
     return (
       <div className="project-detail__notfound">
@@ -29,6 +36,7 @@ function ProjectDetail() {
     );
   }
 
+  // si le projet est bien trouvé
   return (
     <div className="project-detail page">
 
@@ -42,6 +50,7 @@ function ProjectDetail() {
         subtitle={project.tag}
       />
 
+      {/* boutons visibles si les liens existent grâce au && */}
       <div className="project-detail__links">
         {project.github && (
           <a href={project.github} className="btn btn--secondary" target="_blank" rel="noopener noreferrer">
@@ -68,6 +77,7 @@ function ProjectDetail() {
       <section className="project-detail__section">
         <h2>Ce que j'ai réalisé</h2>
         <ul className="project-detail__list">
+          {/* Boucle .map pour créer une puce <li> pour chaque réalisation listée dans les données */}
           {project.realisations.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
@@ -79,16 +89,19 @@ function ProjectDetail() {
         <p>{project.difficulte}</p>
       </section>
 
+      {/* capture visible si une image dans le tableau */}
       {project.screenshots.length > 0 && (
         <section className="project-detail__section">
           <h2>Captures d'écran</h2>
           <div className="project-detail__screenshots">
+            {/* boucle .map pour afficher chaque miniature */}
             {project.screenshots.map((src, index) => (
               <img
                 key={index}
                 src={src}
                 alt={`Capture d'écran ${project.title} ${index + 1}`}
                 className="project-detail__screenshot"
+                // on stocke le chemin de l'image dans le state doncouverture de la lightbox
                 onClick={() => setLightbox(src)}
               />
             ))}
@@ -96,17 +109,18 @@ function ProjectDetail() {
         </section>
       )}
 
+      {/* lightbox */}
       {lightbox && (
         <div
           className="lightbox"
-          onClick={() => setLightbox(null)}
+          onClick={() => setLightbox(null)} // ferme la lightbox si on clique dans le fond noir
           role="dialog"
           aria-modal="true"
           aria-label="Agrandissement de l'image"
         >
           <button
             className="lightbox__close"
-            onClick={() => setLightbox(null)}
+            onClick={() => setLightbox(null)} // ferme la lightbox si on clique sur la petite croix
             aria-label="Fermer"
           >
             ✕
@@ -115,7 +129,8 @@ function ProjectDetail() {
             src={lightbox}
             alt="Capture agrandie"
             className="lightbox__img"
-            onClick={(e) => e.stopPropagation()}
+            // stopPropagation permet à la lightbox de ne pas se fermer si on clique sur l'image
+            onClick={(e) => e.stopPropagation()} 
           />
         </div>
       )}

@@ -2,6 +2,8 @@ import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.webp';
 
+
+// données nav centralisées
 const navItems = [
   { label: 'À propos', to: '/#about' },
   { label: 'Projets', to: '/#projects' },
@@ -10,6 +12,7 @@ const navItems = [
   { label: 'Contact', to: '/#contact' },
 ];
 
+// fonction header avec gestion du curseur glissant
 function Header() {
   const [cursor, setCursor] = useState({ left: 0, width: 0, opacity: 0 });
   const navRef = useRef(null);
@@ -23,6 +26,7 @@ function Header() {
     });
   };
 
+  // cacher le curseur quand on quitte la nav
   const handleMouseLeave = () => {
     setCursor((prev) => ({ ...prev, opacity: 0 }));
   };
@@ -35,6 +39,7 @@ function Header() {
         </Link>
       </div>
 
+      {/* nav principale et aria-label pour accessibilité */}
       <nav className="nav-row" ref={navRef} onMouseLeave={handleMouseLeave} aria-label="Navigation principale">
         {navItems.map((item) => (
           <Link
@@ -47,7 +52,7 @@ function Header() {
           </Link>
         ))}
 
-        {/* Curseur glissant */}
+        {/* curseur glissant */}
         <span
           className="nav-cursor"
           style={{

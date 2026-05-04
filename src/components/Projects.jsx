@@ -7,7 +7,9 @@ function Projects() {
       <h2 className="projects__title">Mes projets</h2>
 
       <div className="projects__grid">
+        {/* .map() pour parcourir mon tableau de données et générer une carte pour chaque projet */}
         {projectsData.map((project) => (
+          // key obligé en React quand on fait une boucle
           <article className="projects__card" key={project.id}>
 
             <div className="projects__card-header">
@@ -32,6 +34,7 @@ function Projects() {
                 <a 
                   href={project.github}
                   className="btn btn--secondary"
+                  // sécurités pour ouvrir un lien externe 
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -39,6 +42,7 @@ function Projects() {
                 </a>
               )}
               
+              {/* le bouton s'affiche si j'ai un lien démo */}
               {project.demo && (
                 <a 
                   href={project.demo}

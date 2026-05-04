@@ -8,7 +8,7 @@ function MentionsLegales() {
         title="Mentions Légales" 
       />
       
-      <section className="univers__section" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
+      <section className="univers__section">
         <h2 className="univers__title">Éditeur du site</h2>
         <p className="univers__intro">
           Le présent site est édité par : <strong>Christophe AIREAUDEAU</strong><br />
