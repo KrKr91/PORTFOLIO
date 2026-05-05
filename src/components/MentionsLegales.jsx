@@ -1,8 +1,14 @@
 import Banner from './Banner';
+import { Link } from 'react-router-dom';
 
 function MentionsLegales() {
   return (
     <div className="page">
+
+      <div className="mentions-legales__nav">
+        <Link to="/" className="project-detail__back">Accueil</Link>
+      </div>
+
       <Banner 
         image="/banners/mentions.webp"
         title="Mentions Légales" 

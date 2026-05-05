@@ -6,8 +6,8 @@ import logo from '../assets/logo.webp';
 // données nav centralisées
 const navItems = [
   { label: 'À propos', to: '/#about' },
-  { label: 'Projets', to: '/#projects' },
   { label: 'Compétences', to: '/#skills' },
+  { label: 'Projets', to: '/#projects' },
   { label: 'Univers Perso', to: '/univers-perso' },
   { label: 'Contact', to: '/#contact' },
 ];

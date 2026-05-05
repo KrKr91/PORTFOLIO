@@ -32,7 +32,7 @@ function About() {
           <ul className="about__list">
             <li><span>📍</span> Toulouse</li>
             <li><span>🟢</span> Disponible immédiatement</li>
-            <li><span>🎓</span> OpenClassrooms — Dév. Web</li>
+            <li><span>🎓</span> OpenClassrooms - Dév. Web</li>
             <li><span>🚗</span> Permis B, véhiculé</li>
           </ul>
           
