@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Banner from './Banner';
+import { Link } from 'react-router-dom';
 
 const designsData = [
   {
@@ -22,11 +23,16 @@ function UniversPerso() {
   return (
     <div className="univers page">
 
+      <div className="univers__nav">
+        <Link to="/" className="project-detail__back">Accueil</Link>
+      </div>
+
       <Banner
         image="/banners/gaming.webp"
         title="Univers Perso"
         subtitle="🎨 Créations & Passions"
       />
+      
 
       {/* la section designs photoshop */}
       <section className="univers__section">
