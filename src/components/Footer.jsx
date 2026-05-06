@@ -20,7 +20,7 @@ function Footer() {
           <span className="footer__sep">·</span>
           
           <a 
-            href="https://www.linkedin.com/in/christophe-aireaudeau"
+            href="https://www.linkedin.com/in/christophe-a-428a551b3/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer__link"
